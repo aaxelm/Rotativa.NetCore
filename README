@@ -4,7 +4,7 @@ Usage:
 
 public ActionResult PrintIndex()
 {
-    return new ActionAsPdf("Index", new { name = "Giorgio" }) { FileName = "Test.pdf" };
+    return new ActionAsPdf("Index", new { name = "Giorgio" }) { FileName = "Test.pdf" });
 }
 
 public ActionResult Index(string name)
