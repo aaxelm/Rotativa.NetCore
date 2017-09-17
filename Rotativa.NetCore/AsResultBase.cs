@@ -1,3 +1,7 @@
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
+using Rotativa.NetCore.Options;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -6,14 +10,6 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
-
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
-
-using Rotativa.NetCore.Options;
 
 namespace Rotativa.NetCore
 {
@@ -153,11 +149,12 @@ namespace Rotativa.NetCore
         {
             var switches = string.Empty;
 
-            var cookieOptions = context.HttpContext.RequestServices.GetService<IOptions<CookieAuthenticationOptions>>();
+            // HACK: Changed the obsolete cookie service with the .Net Core 2.0 one
+            var cookieOptions = context.HttpContext.RequestServices.GetService<CookieBuilder>();
 
-            if (cookieOptions.Value != null)
+            if (cookieOptions != null)
             {
-                var cookieName = cookieOptions.Value.CookieName;
+                var cookieName = cookieOptions.Name;
 
                 string authenticationCookie = null;
                 if (context.HttpContext.Request.Cookies != null && context.HttpContext.Request.Cookies.ContainsKey(cookieName))

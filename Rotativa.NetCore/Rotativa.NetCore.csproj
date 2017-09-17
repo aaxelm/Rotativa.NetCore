@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp1.0;net451</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,27 +28,26 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="1.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
   </ItemGroup>
 
   <PropertyGroup>
     <CodeAnalysisRuleSet>..\stylecop.ruleset</CodeAnalysisRuleSet>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Description>A port of the Rotativa library for the ASP.NET Core library.</Description>
-    <PackageReleaseNotes>This is the initial version of the port and might have some bugs as it is not fully tested.</PackageReleaseNotes>
+    <Description>A port of the Rotativa library for the ASP.NET Core library, compatible with .NET Core 2.0.</Description>
+    <PackageReleaseNotes>Porting for .NET Core 2.0</PackageReleaseNotes>
     <Copyright>Copyright 2017</Copyright>
-    <Authors>Alexandru Munteanu</Authors>
-    <Company />
+    <Authors>Stefano Baruzzo</Authors>
+    <Company>Stefano Baruzzo</Company>
     <Product>Rotativa.NetCore</Product>
     <PackageTags>asp.net core pdf</PackageTags>
-    <Version>1.0.4</Version>
+    <Version>2.0.0</Version>
     <PackageLicenseUrl>https://opensource.org/licenses/mit-license.php</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/aaxelm/Rotativa.NetCore</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/aaxelm/Rotativa.NetCore</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Stefanone91/Rotativa.NetCore</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Stefanone91/Rotativa.NetCore</RepositoryUrl>
     <RepositoryType>github</RepositoryType>
-    <AssemblyVersion>1.0.4.0</AssemblyVersion>
-    <FileVersion>1.0.4.0</FileVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
   </PropertyGroup>
 
 </Project>
