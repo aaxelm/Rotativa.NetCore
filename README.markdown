@@ -5,7 +5,7 @@
 ```csharp
 public ActionResult PrintIndex()
 {
-    return new ActionAsPdf("Index", new { name = "Giorgio" }) { FileName = "Test.pdf" };
+    return new ActionAsPdf("Index", new { name = "Giorgio" }) { FileName = "Test.pdf" });
 }
 
 public ActionResult Index(string name)
@@ -28,7 +28,3 @@ Also available a RouteAsPdf, UrlAsPdf and ViewAsPdf ActionResult.
 It generates Pdf also from authorized actions (web forms authentication).
 
 You can also output images from MVC with ActionAsImage, ViewAsImage, RouteAsImage, UrlAsImage.
-
-##Rotativa HQ
-
-[RotativaHQ.com](http://rotativahq.com) is an API (SaaS) version of Rotativa, hosted on Azure. You can register for free.
