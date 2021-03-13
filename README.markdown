@@ -1,4 +1,7 @@
-﻿#Extremely easy way to create Pdf files from Asp.Net Core.
+This repository is now archived since the creators of the official Rotativa package released their own version for .NET Core here:
+https://github.com/webgio/Rotativa.AspNetCore
+
+#Extremely easy way to create Pdf files from Asp.Net Core.
 
 ##Usage:
 
